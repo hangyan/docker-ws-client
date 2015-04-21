@@ -2,25 +2,14 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/net/websocket"
-	"log"
 	"os"
 )
 
 func main() {
-	origin := "http://localhost/"
-	url := os.Args(1)
-	ws, err := websocket.Dial(url, "", origin)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if _, err := ws.Write([]byte("hello, world!\n")); err != nil {
-		log.Fatal(err)
-	}
-	var msg = make([]byte, 512)
-	var n int
-	if n, err = ws.Read(msg); err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("Received: %s.\n", msg[:n])
+
+	id := os.Args[1]
+	cmd := os.Args[2]
+	wsURL := fmt.Sprintf("ws://localhost:4243/v1.17/containers/%s/attach/ws?logs=0&stream=1&stdin=1&stdout=1&stderr=1", id)
+	UseXNet(wsURL, cmd)
+
 }
