@@ -11,7 +11,8 @@ The first argument is the container id,and second is the command you want
 to execute in that container
 
 ## Notes
-The commands that has stream output may interfere with the later commmand's
+1. The server will first send back the command you send ,then the result,at last is the bash promt.
+2. The commands that has stream output may interfere with the later commmand's
 output,like `top`,`ping`,so you need to restart the container after you execute
 these commands.
 
@@ -26,9 +27,9 @@ a chrome extension can do this : [Simple Websocket Client](https://chrome.google
 
 Notes:
 
-1. You shoud add linebreak when you input the command
-2. the example's (`ls -al`) output has some strange chars,they are terminal's
+1. You shoud add linebreak after the command
+2. the example's (`ls -al`) output has some strange chars,they are the terminal's
 color control character.
-3. Don't use `logs=1` or the output will be messed up.
+3. Don't use `logs=1` ,or the output will be messed up.
 
 
