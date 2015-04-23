@@ -11,8 +11,8 @@ The first argument is the container id,and second is the command you want
 to execute in that container
 
 ## Notes
-1. The server will first send back the command you send ,then the result,at last is the bash promt.
-2. The commands that has stream output may interfere with the later commmand's
+1. The server will first send back the command you send ,then the result,the last line is the bash promt.
+2. The commands that has stream output may interfere with the later command's
 output,like `top`,`ping`,so you need to restart the container after you execute
 these commands.
 
