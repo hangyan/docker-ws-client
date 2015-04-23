@@ -5,7 +5,7 @@ This is a simple example of docker remote attach use websocket protocol.
 `go get github.com/hangyan/docker-ws-client`
 
 ## Usage
-![](https://raw.github.com/hangyan/docker-ws-client/master/ws.png)
+![](https://raw.github.com/hangyan/docker-ws-client/blob/master/ws.png)
 
 The first argument is the container id,and second is the command you want
 to execute in that container
@@ -21,7 +21,7 @@ You can also use a web browser to act as a websocket client too,there is
 a chrome extension can do this : [Simple Websocket Client](https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en)
 
 
-![](https://raw.github.com/hangyan/docker-ws-client/master/extension.png)
+![](https://raw.github.com/hangyan/docker-ws-client/blob/master/extension.png)
 
 
 Notes:
